@@ -1,0 +1,33 @@
+*~
+.DS_Store
+DerivedData/
+*~.nib
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+xcuserdata/
+Pods/
+NinetyKit/API/GraphQL/Generated
+node_modules/
+
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
+
+# bundles
+.bundle/
+vendor/
+
+# certificates
+*.cer
+*.mobileprovision
