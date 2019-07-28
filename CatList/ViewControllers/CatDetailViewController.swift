@@ -7,14 +7,54 @@
 //
 
 import UIKit
+import GiniKit
 
 class CatDetailViewController: UIViewController {
+    
+    @IBOutlet weak var catImageView: GiniImageView!
+    
+    @IBOutlet weak var likeButton: GiniDesignableButton!
+    @IBOutlet weak var dislikeButton: GiniDesignableButton!
+    
+    let apiService = APIService.shared
+    
+    var cat: Cat?
+    var favouriteId: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let cat = self.cat {
+            self.catImageView.imageURL = URL(string: cat.url) ?? nil
+        }
+        
+        self.likeButton.addTargetClosure { [weak self] _ in
+            if let id = self?.cat?.id {
+                self?.apiService.addFovourite(with: ["image_id": id, "sub_id": APIRouter.userId]) { _ in
+                    print("Success")
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            }
+            
+        }
+        
+        self.dislikeButton.addTargetClosure { [weak self] _ in
+            if let id = self?.favouriteId {
+                self?.apiService.deleteFovourite(with: id) { _ in
+                    print("Success")
+                    self?.navigationController?.popViewController(animated: true)
+                }
+            } else {
+                self?.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
+    
     
 
     /*

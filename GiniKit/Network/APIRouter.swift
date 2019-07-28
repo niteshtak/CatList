@@ -46,6 +46,7 @@ public enum APIRouter: URLRequestConvertible {
     case cats(Int)
     case favourites
     case addFavourite
+    case deleteFavourite(Int)
     
     // MARK: - HTTPMethod
     var method: HTTPMethod {
@@ -54,6 +55,8 @@ public enum APIRouter: URLRequestConvertible {
             return .get
         case .addFavourite:
             return .post
+        case .deleteFavourite:
+            return .delete
         }
     }
     
@@ -61,11 +64,13 @@ public enum APIRouter: URLRequestConvertible {
     var path: String {
         switch self {
         case .cats(let page):
-            return "/images/search?limit=2&order=DESC&page=\(page)"
+            return CatApp.Domain.baseURL + "/images/search?limit=20&order=DESC&page=\(page)"
         case .favourites:
-            return "/favourites?sub_id=nitesh-1234&limit=2&order=DESC&page=0"
+            return CatApp.Domain.baseURL + "/favourites?sub_id=\(APIRouter.userId)&limit=30&order=DESC&page=0"
         case .addFavourite:
-            return "/favourites"
+            return CatApp.Domain.baseURL + "/favourites"
+        case .deleteFavourite(let favId):
+            return CatApp.Domain.baseURL + "/favourites/\(favId)"
         }
     }
     
@@ -78,6 +83,14 @@ public enum APIRouter: URLRequestConvertible {
             return nil
         case .addFavourite:
             return nil
+        case .deleteFavourite(_):
+            return nil
+        }
+    }
+    
+    public static var userId: String {
+        get {
+            return "nitesh-1234"
         }
     }
     

@@ -10,6 +10,10 @@
 		9886327D39A7343366C7F86F /* Pods_CatList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A145D4EFED0D519AAB2D0B /* Pods_CatList.framework */; };
 		A3332E5922ECD0DC00B5C1AB /* FavouriteCatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E5822ECD0DC00B5C1AB /* FavouriteCatsViewController.swift */; };
 		A3332E5B22ED581C00B5C1AB /* CatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E5A22ED581C00B5C1AB /* CatDetailViewController.swift */; };
+		A3332E5D22ED609900B5C1AB /* ClosureWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E5C22ED609900B5C1AB /* ClosureWrapper.swift */; };
+		A3332E5F22EDE2B900B5C1AB /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E5E22EDE2B900B5C1AB /* Favourite.swift */; };
+		A3332E6422EE07E600B5C1AB /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E6222EE07E600B5C1AB /* LoadingFooterView.swift */; };
+		A3332E6522EE07E600B5C1AB /* LoadingFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3332E6322EE07E600B5C1AB /* LoadingFooterView.xib */; };
 		A3D6170022EB5BC600F9BB6E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */; };
 		A3D6170422EB5C3300F9BB6E /* CatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */; };
 		A3D6170622EB5C9200F9BB6E /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */; };
@@ -96,6 +100,10 @@
 		8BA43CB6F282ECC4E103790E /* Pods-CatList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatList.release.xcconfig"; path = "Target Support Files/Pods-CatList/Pods-CatList.release.xcconfig"; sourceTree = "<group>"; };
 		A3332E5822ECD0DC00B5C1AB /* FavouriteCatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavouriteCatsViewController.swift; path = "/Users/niteshtak/Development/Nitesh-iOS/GiniCats/CatList/CatList/ViewControllers/FavouriteCatsViewController.swift"; sourceTree = "<absolute>"; };
 		A3332E5A22ED581C00B5C1AB /* CatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewController.swift; sourceTree = "<group>"; };
+		A3332E5C22ED609900B5C1AB /* ClosureWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosureWrapper.swift; sourceTree = "<group>"; };
+		A3332E5E22EDE2B900B5C1AB /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
+		A3332E6222EE07E600B5C1AB /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
+		A3332E6322EE07E600B5C1AB /* LoadingFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingFooterView.xib; sourceTree = "<group>"; };
 		A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionCell.swift; sourceTree = "<group>"; };
 		A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
@@ -197,6 +205,7 @@
 				A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */,
 				A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */,
 				A3D6170C22EC4CB000F9BB6E /* UIImageExtension.swift */,
+				A3332E5C22ED609900B5C1AB /* ClosureWrapper.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -205,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */,
+				A3332E6222EE07E600B5C1AB /* LoadingFooterView.swift */,
+				A3332E6322EE07E600B5C1AB /* LoadingFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 			children = (
 				A3DCE0E922E82B7B002AF65C /* Cat.swift */,
 				A3DCE0EB22E82BF8002AF65C /* PageInfo.swift */,
+				A3332E5E22EDE2B900B5C1AB /* Favourite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -503,6 +515,7 @@
 			files = (
 				A3DCE0EF22E845D3002AF65C /* Main.storyboard in Resources */,
 				A3DCE09822E6BFC8002AF65C /* LaunchScreen.storyboard in Resources */,
+				A3332E6522EE07E600B5C1AB /* LoadingFooterView.xib in Resources */,
 				A3DCE09222E6BFC8002AF65C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,10 +620,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3D6170022EB5BC600F9BB6E /* ReusableView.swift in Sources */,
+				A3332E5D22ED609900B5C1AB /* ClosureWrapper.swift in Sources */,
 				A3DCE08C22E6BFC5002AF65C /* AppDelegate.swift in Sources */,
 				A3332E5B22ED581C00B5C1AB /* CatDetailViewController.swift in Sources */,
 				A3D6170422EB5C3300F9BB6E /* CatCollectionCell.swift in Sources */,
 				A3D6170A22EC4BED00F9BB6E /* GiniImageView.swift in Sources */,
+				A3332E6422EE07E600B5C1AB /* LoadingFooterView.swift in Sources */,
 				A3332E5922ECD0DC00B5C1AB /* FavouriteCatsViewController.swift in Sources */,
 				A3D6170B22EC4BED00F9BB6E /* GiniDesignableView.swift in Sources */,
 				A3DCE0DF22E6EDDD002AF65C /* CatCollectionViewController.swift in Sources */,
@@ -639,6 +654,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3332E5F22EDE2B900B5C1AB /* Favourite.swift in Sources */,
 				A3DCE0EA22E82B7B002AF65C /* Cat.swift in Sources */,
 				A3DCE0E622E80FD1002AF65C /* APIRouter.swift in Sources */,
 				A3DCE0EE22E82E8F002AF65C /* APIService.swift in Sources */,

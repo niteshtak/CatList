@@ -28,9 +28,9 @@ public class APIService {
         _shared = shared
     }
     
-    public func getCats(parameters: [String: Any]? = nil, completion: @escaping CompletionHandler) {
+    public func getCats(with page: Int, parameters: [String: Any]? = nil, completion: @escaping CompletionHandler) {
         
-        guard let url = URL(string: CatApp.Domain.baseURL + APIRouter.cats(1).path) else { return }
+        guard let url = URL(string: APIRouter.cats(page).path) else { return }
         
         Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: APIRouter.header)
             .responseJSON { (response) in
@@ -51,7 +51,7 @@ public class APIService {
     
     public func addFovourite(with parameters: [String: Any], completion: @escaping CompletionHandler) {
         
-        guard let url = URL(string: CatApp.Domain.baseURL + APIRouter.addFavourite.path) else { return }
+        guard let url = URL(string: APIRouter.addFavourite.path) else { return }
         
         Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: APIRouter.header)
             .responseJSON { (response) in
@@ -71,7 +71,7 @@ public class APIService {
     
     public func getFavorites(parameters: [String: Any]? = nil, completion: @escaping CompletionHandler) {
         
-        guard let url = URL(string: CatApp.Domain.baseURL + APIRouter.favourites.path) else { return }
+        guard let url = URL(string: APIRouter.favourites.path) else { return }
         
         Alamofire.request(url, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: APIRouter.header)
             .responseJSON { (response) in
@@ -81,11 +81,31 @@ public class APIService {
                 case .success(_):
                     guard let data = response.data else { return }
                     do {
-                        let cats = try JSONDecoder().decode([Cat].self, from: data)
+                        let cats = try JSONDecoder().decode([Favorite].self, from: data)
                         completion(cats)
                     } catch {
                         completion(nil)
                     }
+                }
+        }
+    }
+    
+    public func deleteFovourite(with favouriteId: Int, parameters: [String: Any]? = nil, completion: @escaping CompletionHandler) {
+        
+        guard let url = URL(string: APIRouter.deleteFavourite(favouriteId).path) else { return }
+        
+        Alamofire.request(url, method: .delete, parameters: parameters, encoding: JSONEncoding.default, headers: APIRouter.header)
+            .responseJSON { (response) in
+                
+                switch response.result {
+                case .failure(let error):
+                    if let data = response.data {
+                        print("Print Server Error: " + String(data: data, encoding: String.Encoding.utf8)!)
+                    }
+                    print(error)
+                    
+                case .success(let value):
+                    completion(value)
                 }
         }
     }
