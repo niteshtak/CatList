@@ -105,11 +105,11 @@
             <objects>
                 <viewController storyboardIdentifier="CatDetailViewController" id="DTs-p8-1e8" customClass="CatDetailViewController" customModule="CatList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gci-F9-830">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-OT-O5d" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
-                                <rect key="frame" x="40" y="98" width="334" height="250"/>
+                                <rect key="frame" x="40" y="10" width="334" height="250"/>
                                 <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="68r-J1-d7q"/>
@@ -121,7 +121,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oY0-R1-Z1F">
-                                <rect key="frame" x="152" y="408" width="110" height="50"/>
+                                <rect key="frame" x="152" y="320" width="110" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-T1-u4L" customClass="GiniDesignableButton" customModule="CatList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>

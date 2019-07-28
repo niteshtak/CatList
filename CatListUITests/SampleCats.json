@@ -1,0 +1,118 @@
+[
+{
+"breeds": [],
+"height": 334,
+"id": "2bh",
+"url": "https://cdn2.thecatapi.com/images/2bh.jpg",
+"width": 500
+},
+{
+"breeds": [],
+"height": 3264,
+"id": "42n",
+"url": "https://cdn2.thecatapi.com/images/42n.jpg",
+"width": 2448
+},
+{
+"breeds": [],
+"height": 334,
+"id": "a5m",
+"url": "https://cdn2.thecatapi.com/images/a5m.jpg",
+"width": 500
+},
+{
+"breeds": [],
+"height": 602,
+"id": "a9u",
+"url": "https://cdn2.thecatapi.com/images/a9u.jpg",
+"width": 900
+},
+{
+"breeds": [],
+"height": 640,
+"id": "cpe",
+"url": "https://cdn2.thecatapi.com/images/cpe.jpg",
+"width": 355
+},
+{
+"breeds": [],
+"height": 600,
+"id": "da6",
+"url": "https://cdn2.thecatapi.com/images/da6.jpg",
+"width": 900
+},
+{
+"breeds": [],
+"height": 491,
+"id": "dib",
+"url": "https://cdn2.thecatapi.com/images/dib.jpg",
+"width": 800
+},
+{
+"breeds": [],
+"height": 640,
+"id": "dj3",
+"url": "https://cdn2.thecatapi.com/images/dj3.jpg",
+"width": 480
+},
+{
+"breeds": [],
+"categories": [
+{
+"id": 6,
+"name": "caturday"
+}
+],
+"height": 3264,
+"id": "MTUzMTgxMw",
+"url": "https://cdn2.thecatapi.com/images/MTUzMTgxMw.jpg",
+"width": 2448
+},
+{
+"breeds": [
+{
+"adaptability": 5,
+"affection_level": 5,
+"alt_names": "",
+"cat_friendly": 4,
+"cfa_url": "http://cfa.org/Breeds/BreedsCJ/EuropeanBurmese.aspx",
+"child_friendly": 4,
+"country_code": "MM",
+"country_codes": "MM",
+"description": "The European Burmese is a very affectionate, intelligent, and loyal cat. They thrive on companionship and will want to be with you, participating in everything you do. While they might pick a favorite family member, chances are that they will interact with everyone in the home, as well as any visitors that come to call. They are inquisitive and playful, even as adults. ",
+"dog_friendly": 4,
+"energy_level": 4,
+"experimental": 0,
+"grooming": 1,
+"hairless": 0,
+"health_issues": 4,
+"hypoallergenic": 0,
+"id": "ebur",
+"indoor": 0,
+"intelligence": 5,
+"lap": 1,
+"life_span": "10 - 15",
+"name": "European Burmese",
+"natural": 0,
+"origin": "Burma",
+"rare": 0,
+"rex": 0,
+"shedding_level": 3,
+"short_legs": 0,
+"social_needs": 5,
+"stranger_friendly": 5,
+"suppressed_tail": 0,
+"temperament": "Sweet, Affectionate, Loyal",
+"vocalisation": 4,
+"weight": {
+"imperial": "7 - 14",
+"metric": "3 - 6"
+}
+}
+],
+"height": 656,
+"id": "GI062lGTf",
+"url": "https://cdn2.thecatapi.com/images/GI062lGTf.png",
+"width": 680
+}
+]
