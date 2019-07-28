@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/niteshtak/Development/Nitesh-iOS/GiniCats/CatList/CatList/ViewControllers/FavouriteCatsViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:CatList.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,22 +1,26 @@
 PODS:
+  - Alamofire (4.8.2)
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
   - Whisper (6.0.2)
 
 DEPENDENCIES:
+  - Alamofire
   - SDWebImage
   - Whisper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - SDWebImage
     - Whisper
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Whisper: 169760fc4bab0abf24d5529f9276f95c25cf1025
 
-PODFILE CHECKSUM: 6b5792f818dcc2df8a64e850a3436a0963a71080
+PODFILE CHECKSUM: 5bc5ca81999c9070aa898b7b5a719578ff19965d
 
 COCOAPODS: 1.7.0
