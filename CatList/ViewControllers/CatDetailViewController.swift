@@ -39,7 +39,7 @@ class CatDetailViewController: UIViewController {
         self.likeButton.addTargetClosure { [weak self] _ in
             if let id = self?.cat?.id {
                 self?.apiService.addFovourite(with: ["image_id": id, "sub_id": APIRouter.userId]) { _ in
-                    print("Success")
+                    AppNotifier.success(message: "Added to favourite ✔︎")
                     self?.navigationController?.popViewController(animated: true)
                 }
             }

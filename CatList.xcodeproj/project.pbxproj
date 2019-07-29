@@ -22,6 +22,7 @@
 		A3332E6E22EE1AF000B5C1AB /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E6D22EE1AF000B5C1AB /* APIServiceTests.swift */; };
 		A3332E6F22EE1B7100B5C1AB /* SampleCats.json in Resources */ = {isa = PBXBuildFile; fileRef = A3332E6822EE1A1700B5C1AB /* SampleCats.json */; };
 		A3B1C04222EF4016002A901F /* SampleCats.json in Resources */ = {isa = PBXBuildFile; fileRef = A3332E6822EE1A1700B5C1AB /* SampleCats.json */; };
+		A3B1C04422EF45B8002A901F /* AppNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B1C04322EF45B8002A901F /* AppNotifier.swift */; };
 		A3D6170022EB5BC600F9BB6E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */; };
 		A3D6170422EB5C3300F9BB6E /* CatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */; };
 		A3D6170622EB5C9200F9BB6E /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */; };
@@ -116,6 +117,7 @@
 		A3332E6622EE19A200B5C1AB /* GiniBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiniBaseUITests.swift; sourceTree = "<group>"; };
 		A3332E6822EE1A1700B5C1AB /* SampleCats.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleCats.json; sourceTree = "<group>"; };
 		A3332E6D22EE1AF000B5C1AB /* APIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceTests.swift; sourceTree = "<group>"; };
+		A3B1C04322EF45B8002A901F /* AppNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotifier.swift; sourceTree = "<group>"; };
 		A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionCell.swift; sourceTree = "<group>"; };
 		A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				A3D6170922EC4BED00F9BB6E /* GiniDesignableView.swift */,
 				A3D6170822EC4BED00F9BB6E /* GiniImageView.swift */,
+				A3B1C04322EF45B8002A901F /* AppNotifier.swift */,
 			);
 			path = DesignableViews;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				A3332E5D22ED609900B5C1AB /* ClosureWrapper.swift in Sources */,
 				A3DCE08C22E6BFC5002AF65C /* AppDelegate.swift in Sources */,
 				A3332E5B22ED581C00B5C1AB /* CatDetailViewController.swift in Sources */,
+				A3B1C04422EF45B8002A901F /* AppNotifier.swift in Sources */,
 				A3D6170422EB5C3300F9BB6E /* CatCollectionCell.swift in Sources */,
 				A3D6170A22EC4BED00F9BB6E /* GiniImageView.swift in Sources */,
 				A3332E6422EE07E600B5C1AB /* LoadingFooterView.swift in Sources */,
