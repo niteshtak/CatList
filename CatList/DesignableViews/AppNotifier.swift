@@ -13,7 +13,7 @@ import AudioToolbox
 final class AppNotifier {
     
     class func whisper(message: String) {
-        let errorString = Whisper.Murmur(title: message, backgroundColor: .red, titleColor: .white, font: UIFont.boldSystemFont(ofSize: 14.0), action: nil)
+        let errorString = Whisper.Murmur(title: message, backgroundColor: UIColor(red: 0.75, green: 0.07, blue: 0.07, alpha: 1), titleColor: .white, font: UIFont.boldSystemFont(ofSize: 14.0), action: nil)
         Whisper.show(whistle: errorString, action: .show(3.0))
         
         let feedback = UINotificationFeedbackGenerator()
@@ -27,7 +27,7 @@ final class AppNotifier {
     }
     
     class func success(message: String) {
-        let infoString = Whisper.Murmur(title: message, backgroundColor: .green, titleColor: UIColor.white, font: UIFont.boldSystemFont(ofSize: 14.0), action: nil)
+        let infoString = Whisper.Murmur(title: message, backgroundColor: UIColor(red: 0.26, green: 0.6, blue: 0.1, alpha: 1), titleColor: UIColor.white, font: UIFont.boldSystemFont(ofSize: 14.0), action: nil)
         Whisper.show(whistle: infoString, action: .show(3.0))
     }
 }

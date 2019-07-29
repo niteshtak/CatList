@@ -49,7 +49,7 @@ class CatDetailViewController: UIViewController {
         self.dislikeButton.addTargetClosure { [weak self] _ in
             if let fav = self?.favourite {
                 self?.apiService.deleteFovourite(with: fav.id) { _ in
-                    print("Success")
+                    AppNotifier.whisper(message: "Removed from favourite ✔︎")
                     self?.navigationController?.popViewController(animated: true)
                 }
             } else {
