@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bna-Uw-4GD">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bna-Uw-4GD">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,43 +40,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gfg-xC-HPZ">
-                            <size key="itemSize" width="176" height="147"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gfg-xC-HPZ">
+                            <size key="itemSize" width="198" height="160"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCollectionCell" id="YM2-sB-lTu" customClass="CatCollectionCell" customModule="CatList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="176" height="147"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCollectionCell" id="nx0-cW-rsI" customClass="CatCollectionCell" customModule="CatList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="198" height="160"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AeT-2P-O6T">
-                                    <rect key="frame" x="0.0" y="0.0" width="176" height="147"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="198" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-37-XoC" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="8" width="160" height="131"/>
-                                            <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyg-H7-azM" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="8" width="182" height="144"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="Hrq-37-XoC" secondAttribute="bottom" constant="8" id="W8G-dV-CFg"/>
-                                        <constraint firstItem="Hrq-37-XoC" firstAttribute="leading" secondItem="AeT-2P-O6T" secondAttribute="leading" constant="8" id="pA2-FK-BI8"/>
-                                        <constraint firstItem="Hrq-37-XoC" firstAttribute="top" secondItem="AeT-2P-O6T" secondAttribute="top" constant="8" id="uig-cv-JbU"/>
-                                        <constraint firstAttribute="trailing" secondItem="Hrq-37-XoC" secondAttribute="trailing" constant="8" id="wJl-ts-vmQ"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="176" height="147"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="iyg-H7-azM" firstAttribute="leading" secondItem="nx0-cW-rsI" secondAttribute="leading" constant="8" id="bWn-qu-CiK"/>
+                                    <constraint firstItem="iyg-H7-azM" firstAttribute="top" secondItem="nx0-cW-rsI" secondAttribute="top" constant="8" id="hYV-fO-K87"/>
+                                    <constraint firstAttribute="bottom" secondItem="iyg-H7-azM" secondAttribute="bottom" constant="8" id="jsv-yJ-FBS"/>
+                                    <constraint firstAttribute="trailing" secondItem="iyg-H7-azM" secondAttribute="trailing" constant="8" id="sG3-pR-bPd"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="catImageView" destination="Hrq-37-XoC" id="69r-1W-TPA"/>
+                                    <outlet property="catImageView" destination="iyg-H7-azM" id="o5J-9S-fCV"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -105,12 +97,12 @@
             <objects>
                 <viewController storyboardIdentifier="CatDetailViewController" id="DTs-p8-1e8" customClass="CatDetailViewController" customModule="CatList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gci-F9-830">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ov-OT-O5d" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
-                                <rect key="frame" x="40" y="10" width="334" height="250"/>
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="40" y="98" width="334" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="68r-J1-d7q"/>
                                 </constraints>
@@ -121,7 +113,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oY0-R1-Z1F">
-                                <rect key="frame" x="152" y="320" width="110" height="50"/>
+                                <rect key="frame" x="152" y="408" width="110" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-T1-u4L" customClass="GiniDesignableButton" customModule="CatList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -147,7 +139,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8Ov-OT-O5d" firstAttribute="top" secondItem="HkL-6M-8kw" secondAttribute="top" constant="10" id="0Tt-rM-KU3"/>
                             <constraint firstItem="oY0-R1-Z1F" firstAttribute="top" secondItem="8Ov-OT-O5d" secondAttribute="bottom" constant="60" id="IZX-9b-epG"/>
@@ -174,44 +166,35 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="RAp-ZE-xen">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PDi-PA-39I">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PDi-PA-39I">
                             <size key="itemSize" width="201" height="153"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCollectionCell" id="mwv-mU-5NQ" customClass="CatCollectionCell" customModule="CatList" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CatCollectionCell" id="d9q-lJ-YrL" customClass="CatCollectionCell" customModule="CatList" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="201" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ggo-zs-7jI">
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="201" height="153"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buv-0b-0gQ" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztn-Sz-nMs" customClass="GiniImageView" customModule="CatList" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="185" height="137"/>
-                                            <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="10"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </view>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="buv-0b-0gQ" secondAttribute="trailing" constant="8" id="8EA-nn-a39"/>
-                                        <constraint firstItem="buv-0b-0gQ" firstAttribute="leading" secondItem="Ggo-zs-7jI" secondAttribute="leading" constant="8" id="KHL-Rp-eEh"/>
-                                        <constraint firstItem="buv-0b-0gQ" firstAttribute="top" secondItem="Ggo-zs-7jI" secondAttribute="top" constant="8" id="Tvw-U4-PHc"/>
-                                        <constraint firstAttribute="bottom" secondItem="buv-0b-0gQ" secondAttribute="bottom" constant="8" id="prr-aO-IcT"/>
-                                    </constraints>
-                                </collectionViewCellContentView>
-                                <size key="customSize" width="201" height="153"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="ztn-Sz-nMs" firstAttribute="leading" secondItem="d9q-lJ-YrL" secondAttribute="leading" constant="8" id="AEq-s2-E9x"/>
+                                    <constraint firstAttribute="trailing" secondItem="ztn-Sz-nMs" secondAttribute="trailing" constant="8" id="MAy-LH-bdf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ztn-Sz-nMs" secondAttribute="bottom" constant="8" id="UoC-Kd-LUO"/>
+                                    <constraint firstItem="ztn-Sz-nMs" firstAttribute="top" secondItem="d9q-lJ-YrL" secondAttribute="top" constant="8" id="fBX-Ga-Uxu"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="catImageView" destination="buv-0b-0gQ" id="vD8-q2-lPn"/>
+                                    <outlet property="catImageView" destination="ztn-Sz-nMs" id="EC3-xg-A6b"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -221,7 +204,7 @@
                         </connections>
                     </collectionView>
                     <connections>
-                        <segue destination="DTs-p8-1e8" kind="showDetail" identifier="ShowFavouriteDetail" id="Jgh-M3-Y1p"/>
+                        <segue destination="DTs-p8-1e8" kind="show" identifier="ShowFavouriteDetail" id="Jgh-M3-Y1p"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecU-mp-9fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -235,6 +218,6 @@
         <image name="likeIcon" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mKW-EY-Dku"/>
+        <segue reference="Jgh-M3-Y1p"/>
     </inferredMetricsTieBreakers>
 </document>

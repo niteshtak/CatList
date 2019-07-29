@@ -19,7 +19,7 @@ class CatDetailViewController: UIViewController {
     let apiService = APIService.shared
     
     var cat: Cat?
-    var favouriteId: Int?
+    var favourite: Favorite?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,10 @@ class CatDetailViewController: UIViewController {
         
         if let cat = self.cat {
             self.catImageView.imageURL = URL(string: cat.url) ?? nil
+        }
+        
+        if let cat = self.favourite {
+            self.catImageView.imageURL = URL(string: cat.image.url) ?? nil
         }
         
         self.likeButton.addTargetClosure { [weak self] _ in
@@ -43,8 +47,8 @@ class CatDetailViewController: UIViewController {
         }
         
         self.dislikeButton.addTargetClosure { [weak self] _ in
-            if let id = self?.favouriteId {
-                self?.apiService.deleteFovourite(with: id) { _ in
+            if let fav = self?.favourite {
+                self?.apiService.deleteFovourite(with: fav.id) { _ in
                     print("Success")
                     self?.navigationController?.popViewController(animated: true)
                 }

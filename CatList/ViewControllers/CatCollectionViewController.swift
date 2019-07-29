@@ -27,8 +27,16 @@ class CatCollectionViewController: UICollectionViewController {
         }
     }
     
-    let apiService = APIService.shared
+    init() {
+        super.init(collectionViewLayout: UICollectionViewLayout())
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    internal var apiService: APIServiceProtocol! = APIService.shared
+
     var cats = [Cat]()
     
     var seletedCat: Cat?
@@ -54,7 +62,7 @@ class CatCollectionViewController: UICollectionViewController {
     
     //MARK: API Fetch
     func getCatList() {
-        apiService.getCats(with: self.page) { [weak self] fetchedCats in
+        apiService.getCats(with: self.page, parameters: nil) { [weak self] fetchedCats in
             if let fetchedCats = fetchedCats as? [Cat] {
                 self?.cats.append(contentsOf: fetchedCats)
                 if let count = self?.cats.count {
@@ -110,7 +118,9 @@ class CatCollectionViewController: UICollectionViewController {
                 self.getCatList()
             })
         }
-     }
+    }
+    
+    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -135,5 +145,17 @@ extension CatCollectionViewController: UICollectionViewDataSourcePrefetching {
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         print("Prefetch: \(indexPaths)")
+    }
+}
+
+class MockVC: CatCollectionViewController {
+    
+    init(apiService: APIServiceProtocol = APIService.shared) {
+        super.init()
+        self.apiService = apiService
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }

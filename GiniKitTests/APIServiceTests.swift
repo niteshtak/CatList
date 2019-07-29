@@ -33,20 +33,18 @@ class APIServiceTests: XCTestCase {
         // When fetch all cats
         let expect = XCTestExpectation(description: "callback")
         
-        sut.getCats(with: 0, completion: { (response: DataResponse<Any>) in
+        sut.getCats(with: 0) { response in
             expect.fulfill()
-            guard let data = response.data else { return }
-            do {
-                let cats = try JSONDecoder().decode([Cat].self, from: data)
-                XCTAssert(cats.count > 0, "Cats exists")
-                for cat in cats {
-                    XCTAssertNotNil(cat.id)
-                }
-            } catch {
-                
+            guard let cats = response as? [Cat] else {
+                return
             }
-            } as! CompletionHandler)
-        
+            XCTAssert(cats.count > 0, "Cats exists")
+            
+            for cat in cats {
+                XCTAssertNotNil(cat.id)
+            }
+            
+        }
         wait(for: [expect], timeout: 15)
     }
 

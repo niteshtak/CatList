@@ -11,7 +11,15 @@ import Alamofire
 
 public typealias CompletionHandler = (Any?) -> ()
 
-public class APIService {
+public protocol APIServiceProtocol {
+    
+    func getCats(with page: Int, parameters: [String: Any]?, completion: @escaping CompletionHandler)
+    func addFovourite(with parameters: [String: Any], completion: @escaping CompletionHandler)
+    func getFavorites(parameters: [String: Any]?, completion: @escaping CompletionHandler)
+    func deleteFovourite(with favouriteId: Int, parameters: [String: Any]?, completion: @escaping CompletionHandler)
+}
+
+public class APIService: APIServiceProtocol {
     
     public static var shared: APIService {
         get {
@@ -109,4 +117,43 @@ public class APIService {
                 }
         }
     }
+}
+
+
+public class MockApiService: APIServiceProtocol {
+    
+    public init() { }
+    
+    public func getCats(with page: Int, parameters: [String : Any]?, completion: @escaping CompletionHandler) {
+        isFetchCatsCalled = true
+        completeClosure = { _ in }
+    }
+    
+    public func addFovourite(with parameters: [String : Any], completion: @escaping CompletionHandler) {
+        completion("Success")
+    }
+    
+    public func getFavorites(parameters: [String : Any]?, completion: @escaping CompletionHandler) {
+        completion([Favorite]())
+    }
+    
+    public func deleteFovourite(with favouriteId: Int, parameters: [String : Any]?, completion: @escaping CompletionHandler) {
+        completion("Success")
+    }
+    
+    
+    public var isFetchCatsCalled = false
+    
+    public var cats: [Cat] = [Cat]()
+    
+    var completeClosure: ((Any?) -> ())!
+    
+    public func fetchSuccess() {
+        completeClosure(cats)
+    }
+    
+    func fetchFail(error: Error?) {
+        completeClosure(error?.localizedDescription)
+    }
+    
 }

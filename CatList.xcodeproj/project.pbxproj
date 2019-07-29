@@ -21,6 +21,7 @@
 		A3332E6C22EE1ABD00B5C1AB /* GiniBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E6622EE19A200B5C1AB /* GiniBaseUITests.swift */; };
 		A3332E6E22EE1AF000B5C1AB /* APIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3332E6D22EE1AF000B5C1AB /* APIServiceTests.swift */; };
 		A3332E6F22EE1B7100B5C1AB /* SampleCats.json in Resources */ = {isa = PBXBuildFile; fileRef = A3332E6822EE1A1700B5C1AB /* SampleCats.json */; };
+		A3B1C04222EF4016002A901F /* SampleCats.json in Resources */ = {isa = PBXBuildFile; fileRef = A3332E6822EE1A1700B5C1AB /* SampleCats.json */; };
 		A3D6170022EB5BC600F9BB6E /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D616FF22EB5BC600F9BB6E /* ReusableView.swift */; };
 		A3D6170422EB5C3300F9BB6E /* CatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170322EB5C3300F9BB6E /* CatCollectionCell.swift */; };
 		A3D6170622EB5C9200F9BB6E /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D6170522EB5C9200F9BB6E /* UICollectionViewExtension.swift */; };
@@ -216,6 +217,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A3B1C04122EF3F48002A901F /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				A3332E6822EE1A1700B5C1AB /* SampleCats.json */,
+			);
+			path = TestData;
+			sourceTree = "<group>";
+		};
 		A3D616FE22EB5B9F00F9BB6E /* UIKitExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +284,7 @@
 		A3DCE08A22E6BFC5002AF65C /* CatList */ = {
 			isa = PBXGroup;
 			children = (
+				A3B1C04122EF3F48002A901F /* TestData */,
 				A3D6170722EC4B9400F9BB6E /* DesignableViews */,
 				A3D6170222EB5C0200F9BB6E /* Views */,
 				A3D616FE22EB5B9F00F9BB6E /* UIKitExtensions */,
@@ -299,7 +309,6 @@
 				A3DCE0AD22E6BFC8002AF65C /* CatListUITests.swift */,
 				A3DCE0AF22E6BFC8002AF65C /* Info.plist */,
 				A3332E6622EE19A200B5C1AB /* GiniBaseUITests.swift */,
-				A3332E6822EE1A1700B5C1AB /* SampleCats.json */,
 			);
 			path = CatListUITests;
 			sourceTree = "<group>";
@@ -538,6 +547,7 @@
 				A3DCE0EF22E845D3002AF65C /* Main.storyboard in Resources */,
 				A3DCE09822E6BFC8002AF65C /* LaunchScreen.storyboard in Resources */,
 				A3332E6522EE07E600B5C1AB /* LoadingFooterView.xib in Resources */,
+				A3B1C04222EF4016002A901F /* SampleCats.json in Resources */,
 				A3DCE09222E6BFC8002AF65C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,6 +918,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = CatList/Main;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
@@ -920,6 +931,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gini.CatList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -931,6 +943,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = CatList/Main;
 				DEVELOPMENT_TEAM = WY25JZ5T88;
@@ -943,6 +956,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gini.CatList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

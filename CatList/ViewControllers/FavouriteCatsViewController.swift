@@ -24,6 +24,7 @@ class FavouriteCatsViewController: UICollectionViewController {
     
     let apiService = APIService.shared
     
+    var selectedFavourite: Favorite?
     var favorites = [Favorite]()
 
     override func viewDidLoad() {
@@ -51,6 +52,7 @@ class FavouriteCatsViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowFavouriteDetail" {
             let vc = segue.destination as! CatDetailViewController
+            vc.favourite = selectedFavourite
         }
     }
 
@@ -78,6 +80,7 @@ class FavouriteCatsViewController: UICollectionViewController {
     
     //MARK: Delegates
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedFavourite = self.favorites[indexPath.row]
         self.performSegue(withIdentifier: "ShowFavouriteDetail", sender: self)
     }
 }
